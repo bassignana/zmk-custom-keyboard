@@ -15,12 +15,12 @@
 
 / {
     behaviors {
-        ee: ee {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp E>, <&kp E>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+//        ee: ee {
+//            compatible = "zmk,behavior-mod-morph";
+//            #binding-cells = <0>;
+//            bindings = <&kp E>, <&kp E>;
+//            mods = <(MOD_LSFT|MOD_RSFT)>;
+//        };
 
         ud_min: underscore_minus {
             compatible = "zmk,behavior-mod-morph";
