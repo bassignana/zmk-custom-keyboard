@@ -63,6 +63,8 @@
 // Row 4
 #define IT_GREAT LS(NON_US_BSLH) // >
 #define IT_UNDER LS(SLASH)       // _
+#define IT_COL LS(COMMA)         // ;
+#define IT_SCOL LS(DOT)          // :
 
 /* AltGr symbols
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐

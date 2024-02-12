@@ -16,17 +16,73 @@
 
 / {
     behaviors {
-//        ee: ee {
-//            compatible = "zmk,behavior-mod-morph";
-//            #binding-cells = <0>;
-//            bindings = <&kp E>, <&kp E>;
-//            mods = <(MOD_LSFT|MOD_RSFT)>;
-//        };
+        ee: ee {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_EGRV>, <&kp IT_EACU>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
         ud_min: underscore_minus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp UNDER>, <&kp MINUS>;
+            bindings = <&kp IT_UNDER>, <&kp IT_MINUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        qts: quotes {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_SQUOT>, <&kp IT_DQUOT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        scl: col_semi {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_COL>, <&kp IT_SCOL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        }; 
+
+        slqst: slash_question {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_FSLH>, <&kp IT_QUES>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        cmin: comma_minor {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp IT_LESS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        dmaj: dot_major {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp IT_GREAT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        eqp: equal_plus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_EQL>, <&kp IT_PLUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        bkt: back_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_BKTK>, <&kp IT_TILDE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        
+        bsp: backslash_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_BSLH>, <&kp IT_PIPE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -75,19 +131,19 @@
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 // | ESC  |  1   |  2   |  3   |  4   |  5   |                                                   |  6   |  7   |  8   |  9   |  0   | BSPC |
-// | TAB  |  Q   |  W   |  E   |  R   |  T   |                                                   |  Y   |  U   |  I   |  O   |  P   | è é  |
-// | ESC  |  A   |  S   |  D   |  F   |  G   |                                                   |  H   |  J   |  K   |  L   | ; :  | ' "  |
-// | CMD  |  Z   |  X   |  C   |  V   |  B   |      | CTL  |??????|         |????  | CTL  |         N   |  M   | , <  | . >  | / ?  | _ -  | 
-//        | ` ~  | \ |  | LEFT | RGHT |      | SHFT | FN1  | HOME |         | PGUP | ENT+opt | SPC+cmd  |  DN  |  UP  |  = + |   *  |
+// | TAB  |  Q   |  W   |  E   |  R   |  T   |                                                   |  Y   |  U   |  I   |  O   |  P   | é è  |
+// | ESC  |  A   |  S   |  D   |  F   |  G   |                                                   |  H   |  J   |  K   |  L   | : ;  | ' "  |
+// | CMD  |  Z   |  X   |  C   |  V   |  B   |      | CTL  |??????|         |????  | CTL  |         N   |  M   | , <  | . >  | / ?  | ???  | 
+//        | ` ~  | \ |  | LEFT | RGHT |      | SHFT | FN1  | HOME |         | PGUP | ENT+opt | SPC+cmd  |  DN  |  UP  |  = + | _ -  |
 //                                                         | END  |         | PGDN |
 
 
                      bindings = <
         &kp ESC    &kp N1  &kp N2   &kp N3   &kp N4    &kp N5                                                                          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0    &kp BSPC
-        &kp TAB    &kp Q   &kp W    &kp E    &kp R     &kp T                                                                           &kp Y     &kp U     &kp I     &kp O      &kp P     &none
-        &kp ESC    &kp A   &kp S    &kp D    &kp F     &kp G                                                                           &kp H     &kp J     &kp K     &kp L      &kp SEMI  &kp SQT
-        &kp LGUI   &kp Z   &kp X    &kp C    &kp V     &kp B               &kp LCTRL &none         &none     &kp RCTRL                 &kp N     &kp M     &kp COMMA &kp PERIOD &kp SLASH &ud_min
-                   &kp GRAVE &kp BSLH &kp LEFT &kp RIGHT         &kp LSHFT &mo 1     &kp HOME      &kp PG_UP &ht RALT ENTER &ht LGUI SPACE       &kp DOWN    &kp UP  &kp EQUAL  &kp STAR
+        &kp TAB    &kp Q   &kp W    &kp E    &kp R     &kp T                                                                           &kp Y     &kp U     &kp I     &kp O      &kp P     &ee
+        &kp ESC    &kp A   &kp S    &kp D    &kp F     &kp G                                                                           &kp H     &kp J     &kp K     &kp L      &scl      &qts
+        &kp LGUI   &kp Z   &kp X    &kp C    &kp V     &kp B               &kp LCTRL &none         &none     &kp RCTRL                 &kp N     &kp M     &cmin     &dmaj      &slqst    &none
+                   &bkt    &bsp     &kp LEFT &kp RIGHT         &kp LSHFT &mo 1     &kp HOME      &kp PG_UP &ht RALT ENTER &ht LGUI SPACE       &kp DOWN  &kp UP    &eqp       &ud_min
                                                                                      &kp END       &kp PG_DN
                      >;
               };
@@ -95,7 +151,7 @@
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |BT_CLR|      |      |      |      |      |                                                   |      |      |      |      |      |      |
-// |      |  !   |  @   |  #   |  $   |  %   |                                                   |   ^  |  &   |  (   |   )  |      |      |
+// |      |  !   |  @   |  #   |  $   |  %   |                                                   |   ^  |  &   |  (   |   )  |  *   |      |
 // |      |  F1  |  F2  |  F3  |  F4  |  F5  |                                                   |      |      |  [   |   ]  |  ò   |   à  |
 // |      |  F6  |  F7  |  F8  |  F9  |  F10 |      |      |      |         |      |      |      |      |      |  {   |   }  |  ù   |      |
 //        |  F11 |  F12 |      |      |      |      |  FN1 |      |         |      |      |      |      |      |      |      |  ì   |
@@ -103,12 +159,12 @@
 
 
                      bindings = <
-        &bt BT_CLR &trans  &trans   &trans   &trans    &trans                                                                    &trans    &trans    &trans    &trans    &trans    &trans
-        &trans     &kp EXCL &kp AT  &kp HASH &kp DLLR  &kp PRCNT                                                                 &kp CARET &kp AMPS  &kp LPAR  &kp RPAR  &trans    &trans
-        &trans     &kp F1  &kp F2   &kp F3   &kp F4    &kp F5                                                                    &trans    &trans    &kp LBKT  &kp RBKT  &kp IT_OGRV     &none
-        &trans     &kp F6  &kp F7   &kp F8   &kp F9    &kp F10             &kp F11   &kp F12       &trans    &trans              &trans    &trans    &l_crly   &r_crly   &none     &trans
-                   &kp F11 &kp F12  &trans   &trans              &trans    &trans    &trans        &trans    &trans    &trans              &trans    &trans    &trans    &none
-                                                                                     &trans        &trans
+        &bt BT_CLR   &trans      &trans     &trans      &trans       &trans                                                                       &trans        &trans       &trans       &trans      &trans    &trans
+        &trans       &kp IT_EXCL &kp IT_AT  &kp IT_HASH &kp IT_USD   &kp IT_PERC                                                                  &kp IT_CARET  &kp IT_AND   &kp IT_LPAR  &kp IT_RPAR &kp IT_AST &trans
+        &trans       &kp F1      &kp F2     &kp F3      &kp F4       &kp F5                                                                       &trans        &trans       &kp IT_LBKT  &kp IT_RBKT &kp IT_OGRV &IT_AGRV
+        &trans       &kp F6      &kp F7     &kp F8      &kp F9       &kp F10             &trans    &trans        &trans    &trans                 &trans        &trans       &IT_LBRC     &IT_RBRC    &IT_UGRV  &trans
+                     &kp F11     &kp F12    &trans      &trans                 &trans    &trans    &trans        &trans    &trans    &trans                     &trans       &trans       &trans      &IT_IGRV
+                                                                                                   &trans        &trans
                      >;
               };
 
