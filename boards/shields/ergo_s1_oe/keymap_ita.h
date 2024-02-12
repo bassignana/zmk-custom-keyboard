@@ -12,19 +12,19 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define IT_BSLH GRAVE            // backslash
+#define IT_BSLH NON_US_BSLH      // backslash
 #define IT_SQUOT MINUS           // '
 #define IT_IGRV EQUAL            // ì
 // Row 2
 #define IT_EGRV LBKT             // è
-#define IT_PLUS SLASH            // +
+#define IT_PLUS RBKT        // +
 // Row 3
 #define IT_OGRV SEMI             // ò
 #define IT_AGRV APOS             // à
 #define IT_UGRV NON_US_HASH      // ù
 // Row 4
-#define IT_LESS NON_US_BSLH      // <
-#define IT_MINUS RBKT            // -
+#define IT_LESS GRAVE    // <
+#define IT_MINUS SLASH            // -
 
 /* Shifted symbols
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
@@ -40,7 +40,7 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define IT_PIPE LS(GRAVE)        // |
+#define IT_PIPE LS(NON_US_BSLH)        // | 
 #define IT_EXCL LS(N1)           // !
 #define IT_DQUOT LS(N2)          // "
 #define IT_PND LS(N3)            // £
@@ -61,7 +61,7 @@
 #define IT_DEG LS(APOS)          // °
 #define IT_SECT LS(NON_US_HASH)  // §
 // Row 4
-#define IT_GREAT LS(NON_US_BSLH) // >
+#define IT_GREAT LS(GRAVE)       // >
 #define IT_UNDER LS(SLASH)       // _
 #define IT_COL LS(COMMA)         // ;
 #define IT_SCOL LS(DOT)          // :
@@ -110,6 +110,6 @@
  * These symbols are not part of the default italian input.
  * I use a custom windows keymap to input them.
 */
-#define IT_BKTK RA(MINUS)        // `
-#define IT_TILDE RA(EQUAL)       // ~
+#define IT_BKTK RA(N9)        // `
+#define IT_TILDE RA(N5)       // ~
 #define IT_CEGR RA(LS(E))        // È

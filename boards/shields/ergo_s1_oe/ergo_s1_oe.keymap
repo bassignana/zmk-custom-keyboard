@@ -40,7 +40,7 @@
         scl: col_semi {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp IT_COL>, <&kp IT_SCOL>;
+            bindings = <&kp IT_SCOL>, <&kp IT_COL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         }; 
 
@@ -91,6 +91,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
 
