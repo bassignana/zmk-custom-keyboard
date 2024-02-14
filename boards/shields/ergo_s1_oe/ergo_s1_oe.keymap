@@ -136,8 +136,8 @@
 // | TAB  |  Q   |  W   |  E   |  R   |  T   |                                                   |  Y   |  U   |  I   |  O   |  P   | é è  |
 // | ESC  |  A   |  S   |  D   |  F   |  G   |                                                   |  H   |  J   |  K   |  L   | : ;  | ' "  |
 // | CMD  |  Z   |  X   |  C   |  V   |  B   |      | CTL  |??????|         |????  | CTL  |         N   |  M   | , <  | . >  | / ?  | ???  | 
-//        | ` ~  | \ |  | LEFT | RGHT |      | SHFT | FN1  | HOME |         | PGUP | ENT+opt | SPC+cmd  |  DN  |  UP  |  = + | _ -  |
-//                                                         | END  |         | PGDN |
+//        | ` ~  | \ |  | LEFT | RGHT |      | SHFT | FN1  | HOME |         | none | ENT+opt | SPC      |  DN  |  UP  |  = + | _ -  |
+//                                                         | END  |         | CMD |
 
 
                      bindings = <
@@ -145,8 +145,8 @@
         &kp TAB    &kp Q   &kp W    &kp E    &kp R     &kp T                                                                           &kp Y     &kp U     &kp I     &kp O      &kp P     &ee
         &kp ESC    &kp A   &kp S    &kp D    &kp F     &kp G                                                                           &kp H     &kp J     &kp K     &kp L      &scl      &qts
         &kp LGUI   &kp Z   &kp X    &kp C    &kp V     &kp B               &kp LCTRL &none         &none     &kp RCTRL                 &kp N     &kp M     &cmin     &dmaj      &slqst    &none
-                   &bkt    &bsp     &kp LEFT &kp RIGHT         &kp LSHFT &mo 1     &kp HOME      &kp PG_UP &mt RALT ENTER &mt LGUI SPACE       &kp DOWN  &kp UP    &eqp       &ud_min
-                                                                                     &kp END       &kp PG_DN
+                   &bkt    &bsp     &kp LEFT &kp RIGHT         &kp LSHFT &mo 1     &kp HOME      &none  &mt RALT ENTER  &mt SPACE       &kp DOWN  &kp UP    &eqp       &ud_min
+                                                                                     &kp END       &kp LGUI
                      >;
               };
               fn_layer {
