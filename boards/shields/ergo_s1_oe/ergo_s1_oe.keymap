@@ -65,10 +65,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        eqp: equal_plus {
+        minp: minus_plus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp IT_EQL>, <&kp IT_PLUS>;
+            bindings = <&kp IT_MINUS>, <&kp IT_PLUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -132,41 +132,41 @@
               default_layer {
 
 // ---------------------------------------------------------------------------------------------------------------------------------
-// | ESC  |  1   |  2   |  3   |  4   |  5   |                                                   |  6   |  7   |  8   |  9   |  0   | BSPC |
-// | TAB  |  Q   |  W   |  E   |  R   |  T   |                                                   |  Y   |  U   |  I   |  O   |  P   | é è  |
-// | ESC  |  A   |  S   |  D   |  F   |  G   |                                                   |  H   |  J   |  K   |  L   | : ;  | ' "  |
-// | CMD  |  Z   |  X   |  C   |  V   |  B   |      | CTL  |??????|         |????  | CTL  |         N   |  M   | , <  | . >  | / ?  | ???  | 
-//        | ` ~  | \ |  | LEFT | RGHT |      | SHFT | FN1  | HOME |         | none | ENT+opt | SPC      |  DN  |  UP  |  = + | _ -  |
-//                                                         | END  |         | CMD |
+// | ESC  |  1   |  2   |  3   |  4   |  5   |                                                                                              |  6   |  7   |  8   |  9   |  0   | BSPC |
+// | TAB  |  Q   |  W   |  E   |  R   |  T   |                                                                                              |  Y   |  U   |  I   |  O   |  P   | é è  |
+// | ESC  |  A   |  S   |  D   |  F   |  G   |                                                                                              |  H   |  J   |  K   |  L   |  :   |  '   |
+// | CMD  |  Z   |  X   |  C   |  V   |  B   |      | CTL  |??????|                                                 |????  | CTL  |            N   |  M   |  ,   |  .   |  /   |  à   | 
+//        |  `   |  \   | LEFT | RGHT |        SHFT | FN1  | HOME |                                                 | none | ENT+opt | SPC         |  DN  |  UP  |  - + |  _   |
+//                                                         | END  |                                                 | CMD |
 
 
                      bindings = <
-        &kp ESC    &kp N1  &kp N2   &kp N3   &kp N4    &kp N5                                                                          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0    &kp BSPC
-        &kp TAB    &kp Q   &kp W    &kp E    &kp R     &kp T                                                                           &kp Y     &kp U     &kp I     &kp O      &kp P     &ee
-        &kp ESC    &kp A   &kp S    &kp D    &kp F     &kp G                                                                           &kp H     &kp J     &kp K     &kp L      &scl      &qts
-        &kp LGUI   &kp Z   &kp X    &kp C    &kp V     &kp B               &kp LCTRL &none         &none     &kp RCTRL                 &kp N     &kp M     &cmin     &dmaj      &slqst    &none
-                   &bkt    &bsp     &kp LEFT &kp RIGHT         &kp LSHFT &mo 1     &kp HOME      &none  &mt RALT ENTER  &kp SPACE       &kp DOWN  &kp UP    &eqp       &ud_min
-                                                                                     &kp END       &kp LGUI
+        &kp ESC    &kp N1  &kp N2   &kp N3    &kp N4     &kp N5                                                                              &kp N6    &kp N7    &kp N8    &kp N9     &kp N0    &kp BSPC
+        &kp TAB    &kp Q   &kp W    &kp E     &kp R      &kp T                                                                               &kp Y     &kp U     &kp I     &kp O      &kp P     &ee
+        &kp ESC    &kp A   &kp S    &kp D     &kp F      &kp G                                                                               &kp H     &kp J     &kp K     &kp L      &scl      &qts
+        &kp LGUI   &kp Z   &kp X    &kp C     &kp V      &kp B               &kp LCTRL &none         &none     &kp RCTRL                     &kp N     &kp M     &cmin     &dmaj      &slqst    &kp IT_AGRV
+                   &bkt    &bsp     &kp LEFT  &kp RIGHT          &kp LSHFT   &mo 1     &kp HOME      &none     &mt RALT ENTER  &kp SPACE               &kp DOWN  &kp UP    &minp      &ud_min
+                                                                                       &kp END       &kp LGUI
                      >;
               };
               fn_layer {
 
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |BT_CLR|      |      |      |      |      |                                                   |      |      |      |      |      |      |
-// |      |  !   |  @   |  #   |  $   |  %   |                                                   |   ^  |  &   |  (   |   )  |  *   |      |
-// |      |  F1  |  F2  |  F3  |  F4  |  F5  |                                                   |      |      |  [   |   ]  |  ò   |   à  |
-// |      |  F6  |  F7  |  F8  |  F9  |  F10 |      |      |      |         |      |      |      |      |      |  {   |   }  |  ù   |      |
-//        |  F11 |  F12 |      |      |      |      |  FN1 |      |         |      |      |      |      |      |      |      |  ì   |
-//                                                         |      |         |      |
+// |BT_CLR|      |  ~   |  |   |      |      |                                                                                                   |      |      |  (   |   )  |      |      |
+// |      |  !   |  @   |  #   |  $   |  %   |                                                                                                   |   ^  |  &   |  [   |   ]  |  *   |      |
+// |      |  F1  |  F2  |  F3  |  F4  |  F5  |                                                                                                   |      |  =   |  {   |   }  |  ;   |   "  |
+// |      |  F6  |  F7  |  F8  |  F9  |  F10 |      |      |      |                                                         |      |      |      |      |      |  <   |   >  |  ?   |   ù  |
+//        |  F11 |  F12 |      |      |      |      |  FN1 |      |                                                         |      |      |      |      |      |      |   ò  |  ì   |
+//                                                         |      |                                                         |      |
 
 
                      bindings = <
-        &bt BT_CLR   &trans      &trans     &trans      &trans       &trans                                                                       &trans        &trans       &trans       &trans      &trans    &trans
-        &trans       &kp IT_EXCL &kp IT_AT  &kp IT_HASH &kp IT_USD   &kp IT_PERC                                                                  &kp IT_CARET  &kp IT_AND   &kp IT_LPAR  &kp IT_RPAR &kp IT_AST &trans
-        &trans       &kp F1      &kp F2     &kp F3      &kp F4       &kp F5                                                                       &trans        &trans       &kp IT_LBKT  &kp IT_RBKT &kp IT_OGRV &kp IT_AGRV
-        &trans       &kp F6      &kp F7     &kp F8      &kp F9       &kp F10             &trans    &trans        &trans    &trans                 &trans        &trans       &kp IT_LBRC  &kp IT_RBRC &kp IT_UGRV  &trans
-                     &kp F11     &kp F12    &trans      &trans                 &trans    &trans    &trans        &trans    &trans    &trans                     &trans       &trans       &trans      &kp IT_IGRV
-                                                                                                   &trans        &trans
+        &bt BT_CLR   &trans      &kp IT_TILDE &kp IT_PIPE &trans       &trans                                                                       &trans        &trans       &kp IT_LPAR  &kp IT_RPAR  &trans       &trans
+        &trans       &kp IT_EXCL &kp IT_AT    &kp IT_HASH &kp IT_USD   &kp IT_PERC                                                                  &kp IT_CARET  &kp IT_AND   &kp IT_LBKT  &kp IT_RBKT  &kp IT_AST   &trans
+        &trans       &kp F1      &kp F2       &kp F3      &kp F4       &kp F5                                                                       &trans        &kp IT_EQL   &kp IT_LBRC  &kp IT_RBRC  &kp IT_COL   &kp IT_DQUOT
+        &trans       &kp F6      &kp F7       &kp F8      &kp F9       &kp F10             &trans    &trans        &trans    &trans                 &trans        &trans       &kp IT_LESS  &kp IT_GREAT &kp IT_QUES  &kp IT_UGRV
+                     &kp F11     &kp F12      &trans      &trans                 &trans    &trans    &trans        &trans    &trans    &trans                     &trans       &trans       &kp IT_OGRV  &kp IT_IGRV
+                                                                                                     &trans        &trans
                      >;
               };
 
