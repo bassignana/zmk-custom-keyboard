@@ -110,7 +110,7 @@
         qts: quotes {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp IT_SQUOT>, <&kp IT_AGRV>;
+            bindings = <&kp IT_SQUOT>, <&kp IT_DQUOT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
