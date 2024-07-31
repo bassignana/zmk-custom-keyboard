@@ -145,7 +145,7 @@
         minp: minus_plus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp IT_MINUS>, <&kp IT_OGRV>;
+            bindings = <&kp IT_MINUS>, <&kp IT_UGRV>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
