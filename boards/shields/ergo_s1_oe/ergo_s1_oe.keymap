@@ -17,74 +17,74 @@
 / {
     behaviors {
         one: one {
-                    compatible = "zmk,behavior-mod-morph";
-                    #binding-cells = <0>;
-                    bindings = <&kp IT_EXCL>, <&kp N1>;
-                    mods = <(MOD_LSFT|MOD_RSFT)>;
-                };
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_EXCL>, <&kp N1>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
         two: two {
-                            compatible = "zmk,behavior-mod-morph";
-                            #binding-cells = <0>;
-                            bindings = <&kp IT_LBRC>, <&kp N2>;
-                            mods = <(MOD_LSFT|MOD_RSFT)>;
-                        };
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_LBRC>, <&kp N2>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
         thr: thr {
-                            compatible = "zmk,behavior-mod-morph";
-                            #binding-cells = <0>;
-                            bindings = <&kp IT_LBKT>, <&kp N3>;
-                            mods = <(MOD_LSFT|MOD_RSFT)>;
-                        };
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_LBKT>, <&kp N3>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
         four: four {
-                            compatible = "zmk,behavior-mod-morph";
-                            #binding-cells = <0>;
-                            bindings = <&kp IT_LPAR>, <&kp N4>;
-                            mods = <(MOD_LSFT|MOD_RSFT)>;
-                        };
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_LPAR>, <&kp N4>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
         five: five {
-                            compatible = "zmk,behavior-mod-morph";
-                            #binding-cells = <0>;
-                            bindings = <&kp IT_PERC>, <&kp N5>;
-                            mods = <(MOD_LSFT|MOD_RSFT)>;
-                        };
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_PERC>, <&kp N5>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
         six: six {
-                            compatible = "zmk,behavior-mod-morph";
-                            #binding-cells = <0>;
-                            bindings = <&kp IT_CARET>, <&kp N6>;
-                            mods = <(MOD_LSFT|MOD_RSFT)>;
-                        };
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_CARET>, <&kp N6>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
         sev: sev {
-                            compatible = "zmk,behavior-mod-morph";
-                            #binding-cells = <0>;
-                            bindings = <&kp IT_RPAR>, <&kp N7>;
-                            mods = <(MOD_LSFT|MOD_RSFT)>;
-                        };
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_RPAR>, <&kp N7>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
         eig: eig {
-                            compatible = "zmk,behavior-mod-morph";
-                            #binding-cells = <0>;
-                            bindings = <&kp IT_RBKT>, <&kp N8>;
-                            mods = <(MOD_LSFT|MOD_RSFT)>;
-                        };
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_RBKT>, <&kp N8>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
         nine: nine {
-                            compatible = "zmk,behavior-mod-morph";
-                            #binding-cells = <0>;
-                            bindings = <&kp IT_RBRC>, <&kp N9>;
-                            mods = <(MOD_LSFT|MOD_RSFT)>;
-                        };
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_RBRC>, <&kp N9>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
         zero: zero {
-                            compatible = "zmk,behavior-mod-morph";
-                            #binding-cells = <0>;
-                            bindings = <&kp IT_EQL>, <&kp N0>;
-                            mods = <(MOD_LSFT|MOD_RSFT)>;
-                        };
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_EQL>, <&kp N0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
         ee: ee {
             compatible = "zmk,behavior-mod-morph";
@@ -94,11 +94,11 @@
         };
 
         ao: ao {
-                    compatible = "zmk,behavior-mod-morph";
-                    #binding-cells = <0>;
-                    bindings = <&kp IT_AGRV>, <&kp IT_OGRV>;
-                    mods = <(MOD_LSFT|MOD_RSFT)>;
-                };
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_AGRV>, <&kp IT_OGRV>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
         ud_min: underscore_minus {
             compatible = "zmk,behavior-mod-morph";
@@ -221,7 +221,7 @@
       &kp ESC      &one    &two    &thr        &four       &five                                                                               &six      &sev       &eig       &nine      &zero     &kp BSPC
       &kp TAB      &kp Q   &kp W   &kp E       &kp R       &kp T                                                                               &kp Y     &kp U      &kp I      &kp O      &kp P     &ee
       &kp IT_PLUS  &kp A   &kp S   &kp D       &kp F       &kp G                                                                               &kp H     &kp J      &kp K      &kp L      &scl      &qts
-      &kp LGUI     &kp Z   &kp X   &kp C       &kp V       &kp B               &kp LCTRL &IT_AT        &none     &kp RCTRL                     &kp N     &kp M      &cmin      &dmaj      &slqst    &ao
+      &kp LGUI     &kp Z   &kp X   &kp C       &kp V       &kp B               &kp LCTRL &kp IT_AT     &none     &kp RCTRL                     &kp N     &kp M      &cmin      &dmaj      &slqst    &ao
                    &bkt    &bsp    &kp IT_HASH &kp IT_USD          &kp LSHIFT  &tog 1    &kp LALT      &kp RALT  &mt RALT ENTER  &kp SPACE               &kp IT_AND &kp IT_AST &minp      &ud_min
                                                                                          &kp LGUI      &kp RGUI
                      >;
