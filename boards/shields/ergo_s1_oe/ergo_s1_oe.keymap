@@ -16,12 +16,89 @@
 
 / {
     behaviors {
+        one: one {
+                    compatible = "zmk,behavior-mod-morph";
+                    #binding-cells = <0>;
+                    bindings = <&kp IT_EXCL>, <&kp N1>;
+                    mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
+
+        two: two {
+                            compatible = "zmk,behavior-mod-morph";
+                            #binding-cells = <0>;
+                            bindings = <&kp IT_LBRC>, <&kp N2>;
+                            mods = <(MOD_LSFT|MOD_RSFT)>;
+                        };
+
+        thr: thr {
+                            compatible = "zmk,behavior-mod-morph";
+                            #binding-cells = <0>;
+                            bindings = <&kp IT_LBKT>, <&kp N3>;
+                            mods = <(MOD_LSFT|MOD_RSFT)>;
+                        };
+
+        four: four {
+                            compatible = "zmk,behavior-mod-morph";
+                            #binding-cells = <0>;
+                            bindings = <&kp IT_LPAR>, <&kp N4>;
+                            mods = <(MOD_LSFT|MOD_RSFT)>;
+                        };
+
+        five: five {
+                            compatible = "zmk,behavior-mod-morph";
+                            #binding-cells = <0>;
+                            bindings = <&kp IT_PERC>, <&kp N5>;
+                            mods = <(MOD_LSFT|MOD_RSFT)>;
+                        };
+
+        six: six {
+                            compatible = "zmk,behavior-mod-morph";
+                            #binding-cells = <0>;
+                            bindings = <&kp IT_CARET>, <&kp N6>;
+                            mods = <(MOD_LSFT|MOD_RSFT)>;
+                        };
+
+        sev: sev {
+                            compatible = "zmk,behavior-mod-morph";
+                            #binding-cells = <0>;
+                            bindings = <&kp IT_RPAR>, <&kp N7>;
+                            mods = <(MOD_LSFT|MOD_RSFT)>;
+                        };
+
+        eig: eig {
+                            compatible = "zmk,behavior-mod-morph";
+                            #binding-cells = <0>;
+                            bindings = <&kp IT_RBKT>, <&kp N8>;
+                            mods = <(MOD_LSFT|MOD_RSFT)>;
+                        };
+
+        nine: nine {
+                            compatible = "zmk,behavior-mod-morph";
+                            #binding-cells = <0>;
+                            bindings = <&kp IT_RBRC>, <&kp N9>;
+                            mods = <(MOD_LSFT|MOD_RSFT)>;
+                        };
+
+        zero: zero {
+                            compatible = "zmk,behavior-mod-morph";
+                            #binding-cells = <0>;
+                            bindings = <&kp IT_EQL>, <&kp N0>;
+                            mods = <(MOD_LSFT|MOD_RSFT)>;
+                        };
+
         ee: ee {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp IT_EGRV>, <&kp IT_EACU>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        ao: ao {
+                    compatible = "zmk,behavior-mod-morph";
+                    #binding-cells = <0>;
+                    bindings = <&kp IT_AGRV>, <&kp IT_OGRV>;
+                    mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
 
         ud_min: underscore_minus {
             compatible = "zmk,behavior-mod-morph";
@@ -132,40 +209,40 @@
               default_layer {
 
 // ---------------------------------------------------------------------------------------------------------------------------------
-// | ESC  |  1   |  2   |  3   |  4   |  5   |                                                                                              |  6   |  7   |  8   |  9   |  0   | BSPC |
+// | ESC  |  ! 1 |  { 2 |  [ 3 |  ( 4 |  % 5 |                                                                                              |  ^ 6 |  ) 7 |  ] 8 |  } 9 |  = 0 | BSPC |
 // | TAB  |  Q   |  W   |  E   |  R   |  T   |                                                                                              |  Y   |  U   |  I   |  O   |  P   | é è  |
-// | ESC  |  A   |  S   |  D   |  F   |  G   |                                                                                              |  H   |  J   |  K   |  L   |  :   |  ' à |
-// | CMD  |  Z   |  X   |  C   |  V   |  B   |      | CTL  |??????|                                                 |????  | CTL  |            N   |  M   |  ,   |  .   |  /   |  ù   | 
-//        |  `   |  \   | LEFT | RGHT |        SHFT | FN1  | HOME |                                                 | none | ENT+opt | SPC         |  DN  |  UP  |  - ò |  _ ì |
-//                                                         | CMD  |                                                 | CMD |
+// |  +   |  A   |  S   |  D   |  F   |  G   |                                                                                              |  H   |  J   |  K   |  L   |  : ; | ' "  |
+// | CMD  |  Z   |  X   |  C   |  V   |  B   |      | CTL  |  @   |                                                 |      | CTL  |            N   |  M   |  , < |  . > |  / ? | à ò  |
+//        |  ` ~ |  \ | |  #   |  $   |        SHFT | FN1  | OPT  |                                                 | OPT  | ENT+opt | SPC         |  &   |  *   |  - ù |  _ ì |
+//                                                         | CMD  |                                                 | CMD  |
 
 
                      bindings = <
-        &kp ESC    &kp N1  &kp N2   &kp N3    &kp N4     &kp N5                                                                              &kp N6    &kp N7    &kp N8    &kp N9     &kp N0    &kp BSPC
-        &kp TAB    &kp Q   &kp W    &kp E     &kp R      &kp T                                                                               &kp Y     &kp U     &kp I     &kp O      &kp P     &ee
-        &kp ESC    &kp A   &kp S    &kp D     &kp F      &kp G                                                                               &kp H     &kp J     &kp K     &kp L      &scl      &qts
-        &kp LGUI   &kp Z   &kp X    &kp C     &kp V      &kp B               &kp LCTRL &none         &none     &kp RCTRL                     &kp N     &kp M     &cmin     &dmaj      &slqst    &kp IT_UGRV
-                   &bkt    &bsp     &kp LEFT  &kp RIGHT          &mo 1       &kp LSHIFT &kp HOME      &none     &mt RALT ENTER  &kp SPACE               &kp DOWN  &kp UP    &minp      &ud_min
-                                                                                       &kp LGUI      &kp LGUI
+      &kp ESC      &one    &two    &thr        &four       &five                                                                               &six      &sev       &eig       &nine      &zero     &kp BSPC
+      &kp TAB      &kp Q   &kp W   &kp E       &kp R       &kp T                                                                               &kp Y     &kp U      &kp I      &kp O      &kp P     &ee
+      &kp IT_PLUS  &kp A   &kp S   &kp D       &kp F       &kp G                                                                               &kp H     &kp J      &kp K      &kp L      &scl      &qts
+      &kp LGUI     &kp Z   &kp X   &kp C       &kp V       &kp B               &kp LCTRL &IT_AT        &none     &kp RCTRL                     &kp N     &kp M      &cmin      &dmaj      &slqst    &ao
+                   &bkt    &bsp    &kp IT_HASH &kp IT_USD          &kp LSHIFT  &tog 1    &kp LALT      &kp RALT  &mt RALT ENTER  &kp SPACE               &kp IT_AND &kp IT_AST &minp      &ud_min
+                                                                                         &kp LGUI      &kp RGUI
                      >;
               };
               fn_layer {
 
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |BT_CLR|      |  ~   |  |   |      |      |                                                                                                   |      |      |  (   |   )  |      |      |
-// |      |  !   |  @   |  #   |  $   |  %   |                                                                                                   |   ^  |  &   |  [   |   ]  |  *   |      |
-// |      |  F1  |  F2  |  F3  |  F4  |  F5  |                                                                                                   |      |  =   |  {   |   }  |  ;   |   "  |
-// |      |  F6  |  F7  |  F8  |  F9  |  F10 |      |      |      |                                                         |      |      |      |      |      |  <   |   >  |  ?   |      |
-//        |  F11 |  F12 |      |      |      |      |  FN1 |      |                                                         |      |      |      |      |      |      |   +  |      |
+// |BT_CLR|      |      |      |      |      |                                                                                                   |      |      |      |      |      |      |
+// |      |  F1  |  F2  |  F3  |  F4  |      |                                                                                                   |      |      | up   |      |      |      |
+// |      |  F5  |  F6  |  F7  |  F8  |      |                                                                                                   |      |  lf  | dw   |  rg  |      |      |
+// |      |  F9  |  F10 |  F11 |  F12 |      |      |      |      |                                                         |      |      |      |      |      |      |      |      |      |
+//        |      |      |      |      |      |      |  FN1 |      |                                                         |      |      |      |      |      |      |      |      |
 //                                                         |      |                                                         |      |
 
 
                      bindings = <
-        &bt BT_CLR   &trans      &kp IT_TILDE &kp IT_PIPE &trans       &trans                                                                       &trans        &trans       &kp IT_LPAR  &kp IT_RPAR  &trans       &trans
-        &trans       &kp IT_EXCL &kp IT_AT    &kp IT_HASH &kp IT_USD   &kp IT_PERC                                                                  &kp IT_CARET  &kp IT_AND   &kp IT_LBKT  &kp IT_RBKT  &kp IT_AST   &trans
-        &trans       &kp F1      &kp F2       &kp F3      &kp F4       &kp F5                                                                       &trans        &kp IT_EQL   &kp IT_LBRC  &kp IT_RBRC  &kp IT_COL   &kp IT_DQUOT
-        &trans       &kp F6      &kp F7       &kp F8      &kp F9       &kp F10             &trans    &trans        &trans    &trans                 &trans        &trans       &kp IT_LESS  &kp IT_GREAT &kp IT_QUES  &trans
-                     &kp F11     &kp F12      &trans      &trans                 &trans    &trans    &trans        &trans    &trans    &trans                     &trans       &trans       &kp IT_PLUS  &trans
+        &bt BT_CLR   &trans      &trans       &trans      &trans       &trans                                                                       &trans        &trans       &trans       &trans     &trans   &trans
+        &trans       &kp F1      &kp F2       &kp F3      &kp F4       &trans                                                                       &trans        &trans       &kp UP       &trans     &trans   &trans
+        &trans       &kp F5      &kp F6       &kp F7      &kp F8       &trans                                                                       &trans        &kp LEFT     &kp DOWN     &kp RIGHT  &trans   &trans
+        &trans       &kp F9      &kp F10      &kp F11     &kp F12      &trans              &trans    &trans        &trans    &trans                 &trans        &trans       &trans       &trans     &trans   &trans
+                     &trans      &trans       &trans      &trans                 &trans    &trans    &trans        &trans    &trans    &trans                     &trans       &trans       &trans     &trans
                                                                                                      &trans        &trans
                      >;
               };
